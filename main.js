@@ -29,7 +29,7 @@ function loop() {
 }
 
 backwardsButton.addEventListener('click', () => currentIndex > 0 ? (currentIndex -= 1, setImage(currentIndex)) : currentIndex = 0);
-forwardsButton.addEventListener('click', () => currentIndex < imgs.length - 1? (currentIndex += 1, setImage(currentIndex)) : currentIndex = 0);
+forwardsButton.addEventListener('click', () => currentIndex < imgs.length - 1? (currentIndex += 1, setImage(currentIndex)) : currentIndex = 0, setImage(currentIndex));
 
 imgs.forEach((e, index) => e.addEventListener('click', () => setImage(index)));
 interval = setInterval(loop, 2000);
